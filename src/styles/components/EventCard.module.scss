@@ -8,24 +8,34 @@
 }
 
 .EventCard {
-  background-color: rgba(220, 233, 226, 0.9);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 24px;
-  border-radius: 48px;
-  border: 20px solid rgba(255, 255, 255, 0.7);
+  border-radius: 32px;
+  border: 4px solid white;
   box-sizing: border-box;
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.4);
   opacity: 1;
-  transition: $TRANSITION_DURATION;
+  transition: $TRANSITION_DURATION transform, $TRANSITION_DURATION height,
+    $TRANSITION_DURATION opacity;
   max-width: 280px;
+  min-width: 230px;
+  @media (max-width: $TABLETS) {
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
 }
 
 .EventCardActive {
   opacity: 1;
-  height: 264px;
+  height: 230px;
 }
 
 .EventCardInactive {
-  height: 310px;
+  height: 280px;
 }
 
 .EventCardHide {
@@ -34,7 +44,7 @@
 
 .EventCardLogo {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 6px;
   height: 128px;
   object-fit: cover;
   object-position: center;
@@ -47,7 +57,7 @@
 
 .EventCardDescription {
   text-align: center;
-  transition: $TRANSITION_DURATION;
+  transition: $TRANSITION_DURATION opacity;
 }
 
 .EventCardDescriptionActive {

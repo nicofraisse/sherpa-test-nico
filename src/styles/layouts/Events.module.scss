@@ -1,8 +1,9 @@
 @import '../variables.scss';
 
 .EventsBanner {
-  background-color: rgba(60, 30, 110, 0.3);
-  transition: $TRANSITION_DURATION;
+  transition: $TRANSITION_DURATION height;
+  // height: 200px;
+  background-position: center;
 }
 
 .EventsList {
@@ -11,6 +12,7 @@
   position: absolute;
   top: 320px;
   width: 100vw;
+  background-color: none;
 }
 
 .EventsBannerShow {
@@ -42,8 +44,8 @@
   width: 100vw;
   top: $HEADER_HEIGHT;
   padding: 60px 360px;
-  z-index: -100;
-  transition: $TRANSITION_DURATION;
+  z-index: -1;
+  transition: $TRANSITION_DURATION opacity;
 }
 
 .EventMeetingsShow {

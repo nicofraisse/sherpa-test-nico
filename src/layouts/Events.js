@@ -46,6 +46,7 @@ const Events = ({ context, events, onSelectEvent }) => {
             ? classes.EventsBannerShow
             : classes.EventsBannerHide,
         ].join(' ')}
+        style={{ backgroundImage: `url('/images/event-bg.jpeg')` }}
       ></div>
 
       <div className={classes.EventsList}>

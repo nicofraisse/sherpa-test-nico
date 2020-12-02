@@ -2,47 +2,49 @@
 
 .Sidebar {
   position: absolute;
-  top: 144px;
+  top: 146px;
   left: 30px;
   transform: translateY(0px);
-  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 12px;
-  border-radius: 16px;
-  transition: $TRANSITION_DURATION;
+  border-radius: 8px;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.5);
+  transition: $TRANSITION_DURATION transform;
   width: 200px;
   a {
     display: block;
-    text-align: center;
-    background-color: white;
-    padding: 6px 24px;
-    border-radius: 24px;
+    // text-align: center;
+    // padding: 6px 24px;
+    // border-radius: 24px;
     margin: 12px;
-    transition: $TRANSITION_DURATION;
+    transition: $TRANSITION_DURATION transform, $TRANSITION_DURATION opacity;
   }
 
-  .EventsMeetingsLink span:last-child {
+  .EventsMeetingsLink a:last-child {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 100%;
     height: 100%;
     vertical-align: middle;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .EventsMeetingsLink * {
-    transition: $TRANSITION_DURATION;
+  .EventsMeetingsLink {
+    transition: $TRANSITION_DURATION transform;
+    * {
+      width: 152px;
+    }
   }
 }
 
 .Sidebarhome {
   .EventsMeetingsLink {
     transform: translateY(0px);
-    span:first-child {
+    a:first-child {
       opacity: 1;
     }
-    span:last-child {
+    a:last-child {
       opacity: 0;
     }
   }
@@ -52,17 +54,17 @@
 }
 
 .Sidebarevents {
-  transform: translateY(200px);
+  transform: translateY(260px);
   .EventsMeetingsLink {
-    transform: translateY(48px);
-    span:first-child {
+    transform: translateY(46px);
+    a:first-child {
       opacity: 0;
     }
-    span:last-child {
+    a:last-child {
       opacity: 1;
     }
   }
   .StudiosLink {
-    transform: translateY(-48px);
+    transform: translateY(-46px);
   }
 }

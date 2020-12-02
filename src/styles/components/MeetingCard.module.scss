@@ -1,16 +1,21 @@
 @import '../variables.scss';
 
 .MeetingCard {
-  background-color: #ddd;
-  height: 100px;
-  border-radius: 16px;
-  padding: 16px;
+  background-color: white;
+  height: 160px;
+  border-radius: 12px;
+  padding: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  h4,
+  p {
+    margin: 4px;
+  }
   h4 {
     text-align: center;
     font-size: 20px;
-    margin: 0;
   }
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }

@@ -3,7 +3,7 @@ import classes from '../styles/components/Header.module.scss'
 
 const Header = ({ context, onSelectHeader }) => {
   return (
-    <header onClick={() => onSelectHeader('header')}>
+    <header className={classes.Header} onClick={() => onSelectHeader('header')}>
       <div
         className={[
           classes.HeaderBanner,
@@ -16,8 +16,8 @@ const Header = ({ context, onSelectHeader }) => {
       </div>
 
       <div className={classes.AccountLinks}>
-        <button>Profile</button>
-        <button>Login</button>
+        <button className='btn btn-secondary m-1'>Profile</button>
+        <button className='btn btn-secondary m-1'>Login</button>
       </div>
     </header>
   )

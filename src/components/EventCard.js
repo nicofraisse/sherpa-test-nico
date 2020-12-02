@@ -10,7 +10,7 @@ const EventCard = ({ eventData, context, active, click }) => {
     if (context === 'home') {
       click()
       const currentPosition = cardReference.current.getBoundingClientRect()
-      const [desiredX, desiredY] = [30, 40]
+      const [desiredX, desiredY] = [30, 80]
       setCardTranslation(
         `translate(${desiredX - currentPosition.x}px, ${
           desiredY - currentPosition.y

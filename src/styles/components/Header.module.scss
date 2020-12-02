@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+.HeaderBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(40, 60, 45, 0.1);
+  text-align: center;
+  transition: $TRANSITION_DURATION;
+  h2 {
+    margin: 0;
+    transition: $TRANSITION_DURATION;
+  }
+}
+
+.HeaderBannerLarge {
+  height: 120px;
+  h2 {
+    font-size: 48px;
+  }
+}
+
+.HeaderBannerSmall {
+  height: $HEADER_HEIGHT;
+  h2 {
+    font-size: 28px;
+  }
+}
+
+.AccountLinks {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(30, 39, 20, 0.2);
+  padding: 30px;
+  border-radius: 100px;
+}

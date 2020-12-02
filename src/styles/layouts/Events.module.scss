@@ -1,0 +1,61 @@
+@import '../variables.scss';
+
+.EventsBanner {
+  background-color: rgba(60, 30, 110, 0.3);
+  transition: $TRANSITION_DURATION;
+}
+
+.EventsList {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 320px;
+  width: 100vw;
+}
+
+.EventsBannerShow {
+  height: 220px;
+}
+
+.EventsBannerHide {
+  height: 0px;
+}
+
+.EventCardsContainer {
+  display: grid;
+  flex-wrap: wrap;
+  width: calc(100vw - 500px);
+  max-width: 900px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 32px;
+  transform: translateY(-50px);
+  @media (max-width: $DESKTOPS_XL) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: $DESKTOPS) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.EventMeetings {
+  position: absolute;
+  width: 100vw;
+  top: $HEADER_HEIGHT;
+  padding: 60px 360px;
+  z-index: -100;
+  transition: $TRANSITION_DURATION;
+}
+
+.EventMeetingsShow {
+  opacity: 1;
+}
+
+.EventMeetingsHide {
+  opacity: 0;
+}
+
+.MeetingCardsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}

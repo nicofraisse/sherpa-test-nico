@@ -1,0 +1,59 @@
+@import '../variables.scss';
+
+.EventCardContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.EventCard {
+  background-color: rgba(220, 233, 226, 0.9);
+  padding: 24px;
+  border-radius: 48px;
+  border: 20px solid rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transition: $TRANSITION_DURATION;
+  max-width: 280px;
+}
+
+.EventCardActive {
+  opacity: 1;
+  height: 264px;
+}
+
+.EventCardInactive {
+  height: 310px;
+}
+
+.EventCardHide {
+  opacity: 0;
+}
+
+.EventCardLogo {
+  width: 100%;
+  border-radius: 16px;
+  height: 128px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 16px;
+}
+
+.EventCardTitle {
+  text-align: center;
+}
+
+.EventCardDescription {
+  text-align: center;
+  transition: $TRANSITION_DURATION;
+}
+
+.EventCardDescriptionActive {
+  opacity: 0;
+}
+
+.EventCardDescriptionInactive {
+  opacity: 1;
+}

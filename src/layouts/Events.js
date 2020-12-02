@@ -34,7 +34,7 @@ const Events = ({ context, events, onSelectEvent }) => {
   })
 
   const meetingCards = meetings.map((meeting) => (
-    <MeetingCard key={meeting.id} meetingData={meeting} />
+    <MeetingCard key={Math.random().toString()} meetingData={meeting} />
   ))
 
   return (

@@ -17,16 +17,7 @@
   opacity: 1;
   transition: $TRANSITION_DURATION transform, $TRANSITION_DURATION height,
     $TRANSITION_DURATION opacity;
-  max-width: 280px;
-  min-width: 230px;
-  @media (max-width: $TABLETS) {
-    h3 {
-      font-size: 24px;
-    }
-    p {
-      font-size: 15px;
-    }
-  }
+  width: 280px;
 }
 
 .EventCardActive {

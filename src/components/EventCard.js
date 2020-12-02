@@ -27,7 +27,9 @@ const EventCard = ({ eventData, context, active, click }) => {
           active ? classes.EventCardActive : classes.EventCardInactive,
           !active && context === 'events' && classes.EventCardHide,
         ].join(' ')}
-        style={{ transform: active ? cardTranslation : 'translate(0px, 0px)' }}
+        style={{
+          transform: active ? cardTranslation : 'translate(0px, 0px)',
+        }}
         id={`event-card-${eventData.id}`}
         onClick={handleClick}
         ref={cardReference}

@@ -14,11 +14,6 @@ const Header = ({ context, onSelectHeader }) => {
       >
         <h2>Marketplace</h2>
       </div>
-
-      <div className={classes.AccountLinks}>
-        <button className='btn btn-secondary m-1'>Profile</button>
-        <button className='btn btn-secondary m-1'>Login</button>
-      </div>
     </header>
   )
 }

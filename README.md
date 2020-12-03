@@ -1,17 +1,10 @@
-# Sherpa frontend web development challenge
+# Sherpa frontend development challenge
 
-## Next steps:
+## Specifications
 
-- Correct eslint warnings
-- Consistent order in CSS properties
-- Error handling especially when network error or no data
-- Deploy
-- Complete Readme
-- Use bootstrap classes and enhance design
-- Mobile responsiveness
-- Unit tests
+-   Javascript framework used: react.js
+-  CSS framework used: Bootstrap
+- Used the API provided with this [base url](https://tt-sherpa-backend.herokuapp.com)
 
-### Notes
-
-- Since an object from the API is called "Event", any variable named "event" will be related to the concept of a sherpa event, not DOM events. If DOM events happen to be referenced by a varibale, it should be named "e"
-  git push
+## Demo
+👉  https://e4asg6.web.app/#

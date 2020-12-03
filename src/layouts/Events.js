@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import classes from '../styles/layouts/Events.module.scss'
 import EventCard from '../components/EventCard'
 import MeetingCard from '../components/MeetingCard'
 import EventDetails from '../components/EventDetails'
 import ErrorMessage from '../components/UI/ErrorMessage'
 import Banner from '../components/Banner'
-import classes from '../styles/layouts/Events.module.scss'
-import { BASE_API_URL } from '../configVariables'
 import Spinner from '../components/UI/Spinner'
+import { API_BASE_URL } from '../configVariables'
 
 const Events = ({ context, events, onSelectEvent, eventsError }) => {
   const [activeEventId, setActiveEventId] = useState(0)
@@ -18,7 +18,7 @@ const Events = ({ context, events, onSelectEvent, eventsError }) => {
 
   useEffect(() => {
     axios
-      .get(`${BASE_API_URL}/events/${activeEventId}/meetings`)
+      .get(`${API_BASE_URL}/events/${activeEventId}/meetings`)
       .then((res) => {
         setMeetings(res.data)
         setMeetingsLoading(false)

@@ -1,3 +1,3 @@
-const BASE_API_URL = 'https://tt-sherpa-backend.herokuapp.com'
+const API_BASE_URL = 'https://tt-sherpa-backend.herokuapp.com'
 
-export { BASE_API_URL }
+export { API_BASE_URL }

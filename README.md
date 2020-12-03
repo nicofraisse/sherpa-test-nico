@@ -11,7 +11,7 @@ To start a development server, run `npm start`. If a new tab doesn't open automa
 - CSS framework used: Bootstrap
 - Used the [API](https://tt-sherpa-backend.herokuapp.com) provided to get data
 - Loading UI (a spinner shows while the data is being fetched)
-- Error handling (a message box will appear to display the error message in case fetching the data in unsuccesful)
+- Error handling (an alert displaying the error message appears if fetching the data is unsuccesful)
 
 ### Libraries & ressources used
 
@@ -21,7 +21,6 @@ To start a development server, run `npm start`. If a new tab doesn't open automa
 - [CSS modules](https://github.com/css-modules/css-modules) for ensuring each class name is scoped to its own component
 - Hosted with Firebase
 
-
 ## Notes
 
-- Static assets (images) are in the `public` folder. Arbitrary images were used for each event since the API did not provide them
+- Static assets (images) are in the `public` folder. Arbitrary images were used for each event since the API did not provide them.

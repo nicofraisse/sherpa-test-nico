@@ -4,7 +4,7 @@ import Events from './layouts/Events'
 import Header from './components/Header'
 import AccountControls from './components/UI/AccountControls'
 import Sidebar from './components/UI/Sidebar'
-import { BASE_API_URL } from './configVariables'
+import { API_BASE_URL } from './configVariables'
 
 const App = () => {
   const [context, setContext] = useState('home')
@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get(`${BASE_API_URL}/events`)
+      .get(`${API_BASE_URL}/events`)
       .then((res) => setEvents(res.data))
       .catch((err) => setEventsError(err.message))
   }, [])

@@ -1,7 +1,6 @@
 # Sherpa frontend development challenge
 
-## Live Demo
-👉  https://e4asg6.web.app/
+## Live Demo 👉  https://e4asg6.web.app/
 
 ## Development server
 To start a development server, run `npm start`. If a new tab doesn't open automatically, go to http://localhost:3000/.

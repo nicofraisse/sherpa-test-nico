@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from '../styles/components/Sidebar.module.scss'
+import classes from '../../styles/components/UI/Sidebar.module.scss'
 
 const Sidebar = ({ context }) => {
   return (

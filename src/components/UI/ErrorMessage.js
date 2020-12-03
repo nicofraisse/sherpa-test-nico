@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from '../styles/components/ErrorMessage.module.scss'
+import classes from '../../styles/components/UI/ErrorMessage.module.scss'
 
 const ErrorMessage = ({ message, type }) => {
   return (

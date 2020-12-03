@@ -1,0 +1,13 @@
+@import '../variables.scss';
+
+.EventsBanner {
+  transition: $TRANSITION_DURATION height;
+  background-position: center;
+}
+.EventsBannerShow {
+  height: 220px;
+}
+
+.EventsBannerHide {
+  height: 0px;
+}

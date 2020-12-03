@@ -1,0 +1,22 @@
+@import '../variables.scss';
+
+.EventDetails {
+  background-color: red;
+  display: inline-block;
+  padding: 8px 32px;
+  box-shadow: $SHADOW;
+  position: absolute;
+  border-radius: 20px;
+  background-color: white;
+  transition: $TRANSITION_DURATION left;
+}
+
+.EventDetailsShow {
+  top: 108px;
+  left: 360px;
+}
+
+.EventDetailsHide {
+  top: 108px;
+  left: -400px;
+}

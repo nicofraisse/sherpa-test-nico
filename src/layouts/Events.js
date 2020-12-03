@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import EventCard from '../components/EventCard'
 import MeetingCard from '../components/MeetingCard'
-import ErrorMessage from '../components/ErrorMessage'
+import EventDetails from '../components/EventDetails'
+import ErrorMessage from '../components/UI/ErrorMessage'
+import Banner from '../components/Banner'
 import classes from '../styles/layouts/Events.module.scss'
 import { BASE_API_URL } from '../configVariables'
-import Spinner from '../components/Spinner'
+import Spinner from '../components/UI/Spinner'
 
 const Events = ({ context, events, onSelectEvent, eventsError }) => {
   const [activeEventId, setActiveEventId] = useState(0)
@@ -56,15 +58,8 @@ const Events = ({ context, events, onSelectEvent, eventsError }) => {
 
   return (
     <>
-      <div
-        className={[
-          classes.EventsBanner,
-          context === 'home'
-            ? classes.EventsBannerShow
-            : classes.EventsBannerHide,
-        ].join(' ')}
-        style={{ backgroundImage: `url('/images/event-bg.jpeg')` }}
-      ></div>
+      <Banner show={context === 'home'} imgSrc='/images/event-bg.jpeg' />
+
       {eventsLoading ? (
         <Spinner />
       ) : eventsError ? (
@@ -74,6 +69,10 @@ const Events = ({ context, events, onSelectEvent, eventsError }) => {
           <div className={classes.EventCardsContainer}>{eventCards}</div>
         </div>
       )}
+      <EventDetails
+        text={events[activeEventId - 1]?.detail}
+        show={context !== 'home'}
+      />
 
       {meetingsLoading ? (
         <Spinner />
@@ -88,7 +87,7 @@ const Events = ({ context, events, onSelectEvent, eventsError }) => {
               : classes.EventMeetingsHide,
           ].join(' ')}
         >
-          <h2 className='mb-4'>Featured Meetings</h2>
+          <h2 className='mb-4 mt-5'>Featured Meetings</h2>
           <div className={classes.MeetingCardsContainer}>{meetingCards}</div>
         </div>
       )}

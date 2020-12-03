@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Events from './layouts/Events'
 import Header from './components/Header'
-import AccountControls from './components/AccountControls'
-import Sidebar from './components/Sidebar'
+import AccountControls from './components/UI/AccountControls'
+import Sidebar from './components/UI/Sidebar'
 import { BASE_API_URL } from './configVariables'
 
 const App = () => {

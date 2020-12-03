@@ -1,11 +1,5 @@
 @import '../variables.scss';
 
-.EventsBanner {
-  transition: $TRANSITION_DURATION height;
-  // height: 200px;
-  background-position: center;
-}
-
 .EventsList {
   display: flex;
   justify-content: center;
@@ -13,14 +7,6 @@
   top: 320px;
   width: 100vw;
   background-color: none;
-}
-
-.EventsBannerShow {
-  height: 220px;
-}
-
-.EventsBannerHide {
-  height: 0px;
 }
 
 .EventCardsContainer {

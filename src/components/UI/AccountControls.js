@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from '../styles/components/AccountControls.module.scss'
+import classes from '../../styles/components/UI/AccountControls.module.scss'
 
 const AccountControls = () => {
   return (

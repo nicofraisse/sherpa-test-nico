@@ -2,18 +2,20 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Events from './layouts/Events'
 import Header from './components/Header'
+import AccountControls from './components/AccountControls'
 import Sidebar from './components/Sidebar'
 import { BASE_API_URL } from './configVariables'
 
 const App = () => {
   const [context, setContext] = useState('home')
   const [events, setEvents] = useState([])
+  const [eventsError, setEventsError] = useState('')
 
   useEffect(() => {
     axios
       .get(`${BASE_API_URL}/events`)
       .then((res) => setEvents(res.data))
-      .catch((err) => console.log(err))
+      .catch((err) => setEventsError(err.message))
   }, [])
 
   const switchContext = (clickOrigin) => {
@@ -27,8 +29,14 @@ const App = () => {
   return (
     <div>
       <Header context={context} onSelectHeader={switchContext} />
+      <AccountControls />
       <Sidebar context={context} />
-      <Events context={context} events={events} onSelectEvent={switchContext} />
+      <Events
+        context={context}
+        events={events}
+        eventsError={eventsError}
+        onSelectEvent={switchContext}
+      />
     </div>
   )
 }

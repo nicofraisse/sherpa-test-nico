@@ -14,7 +14,7 @@ To start a development server, run `npm start`. If a new tab doesn't open automa
 
 ### Libraries & ressources used
 
-- `react.js` 
+- [React.js](https://reactjs.org/) functional components & hooks
 - [axios](https://github.com/axios/axios) for API calls
 - [SCSS](https://github.com/sass/sass) to easilty declare CSS variables and for nesting CSS selectors
 - [CSS modules](https://github.com/css-modules/css-modules) for ensuring each class name is scoped to its component

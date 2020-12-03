@@ -13,6 +13,10 @@
     margin: 0;
     transition: $TRANSITION_DURATION font-size;
   }
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(253, 250, 245, 1);
+  }
 }
 
 .HeaderBannerLarge {

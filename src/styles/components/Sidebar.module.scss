@@ -2,13 +2,14 @@
 
 .Sidebar {
   position: absolute;
+  z-index: 100;
   top: 146px;
   left: 30px;
   transform: translateY(0px);
   background-color: rgba(255, 255, 255, 0.7);
   padding: 12px;
   border-radius: 8px;
-  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: $SHADOW;
   transition: $TRANSITION_DURATION transform;
   width: 200px;
   a {
@@ -46,6 +47,7 @@
     }
     a:last-child {
       opacity: 0;
+      pointer-events: none;
     }
   }
   .StudiosLink {
@@ -62,6 +64,7 @@
     }
     a:last-child {
       opacity: 1;
+      pointer-events: auto;
     }
   }
   .StudiosLink {
